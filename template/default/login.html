@@ -1,5 +1,5 @@
     <main class="main-content">
-        <h1 class="main-title">Login</h1>
+        <h1 class="main-title">登陆</h1>
         <article class="news-post">
             <div class="modal-login form-content" >
                 {if="$result != ''"}
@@ -10,10 +10,10 @@
                     {/if}
                 {/if}
                 <form name="loginForm" action="/login" method="POST">
-                    <input class="form-data" type="text" id="login" name="login" placeholder="Usuário" autocomplete="off" required pattern="[a-zA-Z][A-Za-z0-9]{4,16}"><br>
-                    <input class="form-data" type="password" id="password" name="password" placeholder="Senha" required pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$*%]).{8,16}"><br>
+                    <input class="form-data" type="text" id="login" name="login" placeholder="用户名" autocomplete="off" required ><br>
+                    <input class="form-data" type="password" id="password" name="password" placeholder="密码" required ><br>
                     <input type="hidden" name="token" value="{$csrf_token}">
-                    <a class="recover-pass" href="/forgot-password">Esqueceu a senha?</a>
+                    <a class="recover-pass" href="/forgot-password">忘记密码?</a>
                     <div class="g-recaptcha captcha-register" data-sitekey="{#PUBLIC_KEY#}" data-theme="dark"></div>
                     <button id="btn-send-form-login"></button>
                 </form>

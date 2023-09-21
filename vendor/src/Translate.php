@@ -15,7 +15,10 @@ class Translate{
                 $array = file_get_contents(APP_LANG.'en.json');
                 $array = json_decode($array, true);
                 break;
-            
+            case 'cn':
+                $array = file_get_contents(APP_LANG.'cn.json');
+                $array = json_decode($array, true);
+                break;
             default:
                 $array = file_get_contents(APP_LANG.'pt-br.json');
                 $array = json_decode($array, true);
@@ -23,7 +26,7 @@ class Translate{
         }
 
         if(!isset($array[$value])){
-            return 
+            return
             'O texto para essa ação precisa ser adicionado.<br>
             The text for this actions need to be added.';
         }
@@ -41,12 +44,15 @@ class Translate{
                 $array = file_get_contents(APP_LANG.'pt-br.json');
                 $array = json_decode($array, true);
                 break;
-
+            case 'cn':
+                $array = file_get_contents(APP_LANG.'cn.json');
+                $array = json_decode($array, true);
+                break;
             case 'en':
                 $array = file_get_contents(APP_LANG.'en.json');
                 $array = json_decode($array, true);
                 break;
-            
+
             default:
                 $array = file_get_contents(APP_LANG.'pt-br.json');
                 $array = json_decode($array, true);
@@ -54,7 +60,7 @@ class Translate{
         }
 
         if(!isset($array[$value])){
-            return 
+            return
             'O texto para essa ação precisa ser adicionado.<br>
             The text for this actions need to be added.';
         }

@@ -1,0 +1,72 @@
+{
+    "testes": "testes.",
+
+    "invalid_username": "用户名无效！",
+    "invalid_password": "密码无效！",
+    "invalid_match_pw": "两次密码不匹配！",
+    "invalid_email": "邮箱格式无效！",
+    "invalid_match_email": "邮箱不匹配！",
+    "invalid_csrf_token": "请重新加载页面，然后重试。",
+    "username_not_avail": "所选用户名不可用。",
+    "success_register": "帐户创建成功！",
+    "generic_err_register": "帐户创建失败！",
+    "error_captcha": "验证码不正确！",
+
+    "notfound_user_email": "用户名或邮箱无效！",
+    "fail_to_update_new_pass": "操作失败，请重试！",
+    "send_email_error": "发送邮件失败，请重试！",
+    "sent_email": "电子邮件发送成功！",
+    "failed_to_get_user_email": "注册的邮箱无效！",
+
+    "title_new_password": "新密码",
+    "title_social_id": "字符密码",
+    "title_warehouse_pw": "仓库密码",
+
+    "generic_login_err": "用户名或密码无效。",
+    "user_dont_exist": "用户不存在",
+    "user_unbanned": "永久禁令已被解除。",
+    "err_unbann_user": "用户尚未被解封。",
+    "user_perma_ban": "该用户已被永久禁止。",
+    "err_user_perma_ban": "禁止用户失败。",
+    "user_temp_ban": "该用户已被暂时禁止。",
+    "generic_err_user_ban": "未知错误。",
+    "cant_login_user_banned": "帐户被禁止直至：",
+    "cant_login_user_banned2": "帐户被禁止。",
+
+    "disabled_register": "帐户创建未激活。",
+    "err_max_account_email": "该邮箱的账户数量已达到上限。",
+
+    "invalid_user_email": "当前电子邮件地址不正确。",
+    "success_change_email": "电子邮件已更改。",
+    "generic_err_change_email": "电子邮件尚未更改。",
+
+    "success_change_password": "密码已更改！",
+    "generic_err_change_password": "密码尚未更改。",
+    "wrong_user_pw": "当前密码不正确。",
+
+    "no_characters_found": "未找到字符。",
+    "character_moved": "角色已移至城镇。",
+    "character_in_town": "角色已经在城镇中。",
+    "no_character_moved": "没有发现可以移动的角色。",
+
+    "not_posts_found": "没有找到罐子。",
+    "error_insert_new_post": "该帖子尚未创建。",
+    "success_update_post": "帖子更新成功。",
+    "success_create_post": "帖子创建成功。",
+    "failed_update_post": "帖子尚未更新。",
+    "post_deleted": "帖子已删除。",
+    "err_post_delete": "帖子尚未删除。",
+    "invalid_value": "金额无效",
+    "coins_added": " 硬币添加到：",
+    "err_add_coins": "投币失败。",
+
+    "send_email_timer": "您现在无法发送另一封电子邮件，请稍后再试。",
+    "btn_home": "首页",
+    "btn_register": "注册",
+    "btn_my_account": "我的账号",
+    "btn_ranking": "排名",
+    "btn_ranking_player": "玩家排名",
+    "btn_ranking_guild": "帮会排名",
+    "btn_download": "下载"
+
+}

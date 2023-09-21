@@ -4,9 +4,9 @@ include('init.php');
 function isValidUsername($username){
     $username = htmlspecialchars($username);
 
-    if(!preg_match("/^[a-zA-Z][A-Za-z0-9]{4,16}$/", $username)){
+    /*if(!preg_match("/^[a-zA-Z][A-Za-z0-9]{4,16}$/", $username)){
         return false;
-    }
+    }*/
 
     return $username;
 }
@@ -25,16 +25,16 @@ function isValidPassword($password){
     $password = htmlspecialchars($password);
     /*
     /^              -> Inicio da expressão.
-    (?=.*[A-Z])     -> Ao menos 1 letra maiúscula 
+    (?=.*[A-Z])     -> Ao menos 1 letra maiúscula
     (?=.*[!@#$&*%]) -> Ao menos 1 caractere especial
     (?=.*[0-9])     -> Ao menos 1 número
     (?=.*[a-z])     -> Ao menos 1 letra minúscula
     .{8,16}         -> Entre 8 e 16 caracteres
     $/              -> Final da expressão
     */
-    if(!preg_match("/^(?=.*[A-Z])(?=.*[!@#$*%])(?=.*[0-9])(?=.*[a-z]).{8,16}$/", $password)){
+    /*if(!preg_match("/^(?=.*[A-Z])(?=.*[!@#$*%])(?=.*[0-9])(?=.*[a-z]).{8,16}$/", $password)){
         return false;
-    }
+    }*/
 
     return $password;
 }
@@ -83,7 +83,7 @@ function getPlayerJob($job){
         case 0:
             echo '<img style="width:20%;" src="/template/default/images/icons/0.webp" alt="Guerreiro-M">';
             break;
-        
+
         case 1:
             echo '<img style="width:20%;" src="/template/default/images/icons/1.webp" alt="Ninja-F">';
             break;
@@ -91,7 +91,7 @@ function getPlayerJob($job){
         case 2:
             echo '<img style="width:20%;" src="/template/default/images/icons/2.webp" alt="Shura-M">';
             break;
-        
+
         case 3:
             echo '<img style="width:20%;" src="/template/default/images/icons/3.webp" alt="Shaman-F">';
             break;
@@ -99,7 +99,7 @@ function getPlayerJob($job){
         case 4:
             echo '<img style="width:20%;" src="/template/default/images/icons/4.webp" alt="Guerreiro-F">';
             break;
-            
+
         case 5:
             echo '<img style="width:20%;" src="/template/default/images/icons/5.webp" alt="Ninja-M">';
             break;
@@ -110,13 +110,13 @@ function getPlayerJob($job){
 
         case 7:
             echo '<img style="width:20%;" src="/template/default/images/icons/7.webp" alt="Shaman-M">';
-            break;    
-        
+            break;
+
         case 8:
             echo '<img style="width:20%;" src="/template/default/images/icons/8.webp" alt="Lycan">';
-            break; 
+            break;
 
-        
+
         default:
         echo '<img style="width:20%;" src="/template/default/images/icons/0.webp" alt="">';
             break;
@@ -130,7 +130,7 @@ function generateLinksPagination($pAtual, $total, $pagina = 'ranking-players'){
 
     $ultima = $total;
     $primeira = 1;
-    
+
     if($pAtual != $total){
         if($pAtual > 1){
             echo " <a href='/$pagina?p=$ant'><< $ant</a> ";
@@ -146,7 +146,7 @@ function generateLinksPagination($pAtual, $total, $pagina = 'ranking-players'){
         echo " <a href='/$pagina?p=1'><<</a> ";
         echo " <a href='/$pagina?p=$ant'>$ant</a> ";
         echo " <a class='p-atual' tabindex='-1'>$pAtual</a> ";
-        
+
     }
 
 }
@@ -164,7 +164,7 @@ function generatePassword(){
     foreach ($chars as $value) {
         $pass .= substr(str_shuffle($value), 0, 3);
     }
-    
+
     return str_shuffle($pass);
 }
 
