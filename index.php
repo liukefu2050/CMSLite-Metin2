@@ -1,6 +1,7 @@
 <?php
 // session_set_cookie_params(900, null, null, true, true);
 session_start();
+//phpinfo();
 
 if(!isset($_SESSION['token']) && empty($_SESSION['token'])){
     $_SESSION['token'] = bin2hex(random_bytes(24));
@@ -25,7 +26,7 @@ try {
         "header" => false,
         "footer" => false
     ]);
-
+    echo $e;
     $page->setTpl('offline');//template/default/offline.html
     exit;
 }
@@ -51,13 +52,13 @@ $app->get('/new-account', function(){
 });
 
 $app->post('/new-account', function(){
-    
+
     if(!empty($_POST)){
 
         $username = isValidUsername($_POST['username']);
         $password = isValidPassword($_POST['password']);
         $email = isValidEmail($_POST['email']);
-    
+
         if(!$username){
             User::setMsg([Translate::text('invalid_username'), 'failed']);
         }elseif(!$password){
@@ -88,7 +89,7 @@ $app->get('/login', function(){
         "result" => User::getMsg(),
         "csrf_token" => $_SESSION['token']
     ]);
-    
+
 });
 
 $app->post('/login', function(){
@@ -96,7 +97,7 @@ $app->post('/login', function(){
     if(!empty($_POST)){
         $username = isValidUsername($_POST['login']);
         $password = isValidPassword($_POST['password']);
-        
+
         if(!$username){
             User::setMsg([Translate::text('invalid_username'), 'failed']);
         }elseif(!$password){
@@ -184,7 +185,7 @@ $app->get('/my-account/change-password', function(){
         "result" => User::getMsg(),
         "csrf_token" => $_SESSION['token']
     ]);
-    
+
 });
 
 $app->post('/my-account/change-password', function(){
@@ -218,7 +219,7 @@ $app->post('/my-account/change-password', function(){
 
 $app->get('/my-account/unbug-char', function(){
     User::isValidLogin();
-    
+
     $page = new Page();
 
     $characters = User::getCharacters();
@@ -324,7 +325,7 @@ $app->post('/admin/coins', function(){
     generateToken();
     header("Location: /admin/coins");
     exit;
-    
+
 });
 
 $app->get('/admin/posts', function(){
@@ -404,7 +405,7 @@ $app->post('/admin/posts/editpost/:id', function($id){
     if(!User::isAdmin()){
         User::goHome();
     }
-    
+
     if(!empty($_POST)){
         $title = htmlspecialchars($_POST['postTitle']);
         $category = htmlspecialchars($_POST['postCategory']);
@@ -429,7 +430,7 @@ $app->get('/admin/posts/deletepost/:id', function($id){
     if(!User::isAdmin()){
         User::goHome();
     }
-    
+
     Posts::deletePost($id);
 
     header("Location: /admin/posts");
@@ -473,7 +474,7 @@ $app->get('/ranking-players', function(){
     $page->setTpl('ranking-player', [
         "players" => $ranking['players'],
         "contador" => $contador,
-        "pAtual" => $paginaAtual, 
+        "pAtual" => $paginaAtual,
         "totalPages" => $ranking['pages'],
         "guildName" => new Ranking()
     ]);
@@ -492,7 +493,7 @@ $app->get('/ranking-guilds', function(){
     $page->setTpl('ranking-guildas', [
         "guildas" => $ranking['guildas'],
         "contador" => $contador,
-        "pAtual" => $paginaAtual, 
+        "pAtual" => $paginaAtual,
         "totalPages" => $ranking['pages']
     ]);
 });
@@ -504,11 +505,11 @@ $app->get('/downloads', function(){
 });
 
 $app->get("/forgot-password", function(){
- 
+
     $page = new Page();
 
     $page->setTpl('recover-password', [
-        "result" => User::getMsg() 
+        "result" => User::getMsg()
     ]);
 });
 
@@ -533,7 +534,7 @@ $app->get("/my-account/warehouse-pw", function(){
 
     $_SESSION['mail_timer'] = $timeInMin;
     User::sendWarehousePW($newWarehousePW, $emailBody);
-    
+
     header("Location: /my-account");
     exit;
 });
@@ -549,9 +550,9 @@ $app->get("/my-account/char-pw", function(){
         header("Location: /my-account");
         exit;
     }
-    
+
     $newSocialID = generateSocialID();
-    
+
     $emailBody = file_get_contents(EMAIL_TPL."send-socialid.html");
     $emailBody = str_replace("#name#", $_SESSION['username'], $emailBody);
     $emailBody = str_replace("#senha#", $newSocialID, $emailBody);
@@ -575,7 +576,7 @@ $app->post("/forgot-password", function(){
         header("Location: /my-account");
         exit;
     }
- 
+
     if(!empty($_POST)){
         $username = isValidUsername($_POST['login']);
         $email = isValidEmail($_POST['email']);
