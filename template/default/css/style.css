@@ -25,7 +25,6 @@ a{
     height: 560px;
     background-color: #171717;
     margin: auto;
-    font-family: 'Cinzel', serif;
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.226);
     padding-top: 15px;
@@ -85,7 +84,6 @@ a{
     background-color: #2b2a2a;
     color: #8d8d8d;
     padding-left:20px;
-    font-family: 'Cinzel', serif;
     font-size: 1.1rem;
 }
 
@@ -165,7 +163,7 @@ a.tip:hover span {
     height: 75px;
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,0.7707283597032564) 0%, rgba(0,0,0,0) 100%);
-    -webkit-box-shadow: 0px 3px 2px -2px rgba(0,0,0,0.61); 
+    -webkit-box-shadow: 0px 3px 2px -2px rgba(0,0,0,0.61);
     box-shadow: 0px 3px 2px -2px rgba(0,0,0,0.61);
 }
 
@@ -188,7 +186,7 @@ a.tip:hover span {
 }
 
 .menu .item:hover{
-    -webkit-box-shadow: 0px 3px 2px -2px #892f24; 
+    -webkit-box-shadow: 0px 3px 2px -2px #892f24;
     box-shadow: 0px 3px 2px -2px #892f24;
     background-color: rgba(0, 0, 0, 0.13);
 }
@@ -201,7 +199,7 @@ a.tip:hover span {
 nav .menu .submenu{
     overflow: hidden;
     max-height: 0;
-    position: absolute;    
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.096);
     -webkit-transition: max-height 0.2s ease-in;
     transition: max-height 0.2s ease-in;
@@ -262,7 +260,7 @@ nav .menu .submenu{
     margin: 60px 30px 30px 30px;
     text-align: center;
     line-height: 50px;
-    font-family: 'Cinzel', serif;
+
     color: white;
     text-decoration: none;
     background-color: #271f1f;
@@ -300,7 +298,7 @@ nav .menu .submenu{
 
 .logo img{
     max-width: 640px;
-    max-height: 220px;  
+    max-height: 220px;
 }
 .class-header{
     margin-top: -75px;
@@ -323,7 +321,7 @@ nav .menu .submenu{
 .section-title{
     height: 77px;
     background-image: url('/template/default/images/bg-title.webp');
-    font-family: 'Cinzel', serif;
+
     text-align: center;
 }
 
@@ -477,7 +475,7 @@ nav .menu .submenu{
 .box-news{
     height: 415px;
     width: 590px;
-    font-family: 'Cinzel', serif;
+
     color: white;
 }
 
@@ -523,7 +521,7 @@ nav .menu .submenu{
     width: 530px;
     height: 260px;
     overflow: hidden;
-    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.56); 
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.56);
     box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.56);
     position: relative;
 }
@@ -641,7 +639,7 @@ nav .menu .submenu{
 .box-footer{
     width: 590px;
     display: inline-block;
-    font-family: 'Cinzel', serif;
+
     color: white;
 }
 
@@ -682,7 +680,7 @@ nav .menu .submenu{
 }
 
 .news-post > span{
-    font-family: 'Cinzel', serif;
+
     font-size: 1.4rem;
 }
 .news-post > hr{
@@ -720,7 +718,7 @@ nav .menu .submenu{
 
 .box-data span{
     font-size: 1.3rem;
-    font-family: 'Cinzel', serif;
+
 }
 
 .box-data a{
@@ -767,7 +765,7 @@ nav .menu .submenu{
 
 .box-user-forms span{
     font-size: 1.3rem;
-    font-family: 'Cinzel', serif;
+
 }
 .user-forms{
     margin-top: 10px;
@@ -781,7 +779,7 @@ nav .menu .submenu{
     background-color: #2b2a2a;
     color: #8d8d8d;
     padding-left:20px;
-    font-family: 'Cinzel', serif;
+
     font-size: 1.1rem;
 }
 

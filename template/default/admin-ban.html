@@ -14,9 +14,9 @@
                         {/if}
                     {/if}
                     <form action="/admin/ban" method="POST" class="user-forms">
-                        <input type="text" id="ban-username" name="ban-username" placeholder="Login/Username" autocomplete="off" required pattern="[a-zA-Z][A-Za-z0-9]{4,16}"><a class="tip" tabindex="-1">?<span>- Se o usuário já estiver banido, o banimento será removido.<br><br>- O ban temporário só é removido quando o tempo definido acabar. </span></a><br>
+                        <input type="text" id="ban-username" name="ban-username" placeholder="Login/Username" autocomplete="off" required pattern="[a-zA-Z][A-Za-z0-9]{4,16}"><a class="tip" tabindex="-1">?<span>- 如果用户已被禁止，则该禁令将被删除。<br><br>- 只有当设定的时间用完时，临时禁令才会被取消。 </span></a><br>
 
-                        <input type="number" id="ban-time" name="ban-time" placeholder="Duração do Ban" autocomplete="off" pattern="[0-9]{1,5}"><a class="tip" tabindex="-1">?<span>- Tempo do Bloqueio em dias.<br><br>- Deixar vazio para Bloqueio permanente.</span></a><br>
+                        <input type="number" id="ban-time" name="ban-time" placeholder="禁令期限" autocomplete="off" pattern="[0-9]{1,5}"><a class="tip" tabindex="-1">?<span>- 锁定时间（天）。<br><br>- 保持空状态以进行永久锁定。</span></a><br>
 
                         <input type="hidden" name="__token" value="{$csrf_token}">
                         <button onclick="return confirm('想要禁止/取消禁止用户?')">禁止/撤消</button>
