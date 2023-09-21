@@ -19,7 +19,7 @@
     "failed_to_get_user_email": "注册的邮箱无效！",
 
     "title_new_password": "新密码",
-    "title_social_id": "字符密码",
+    "title_social_id": "角色密码",
     "title_warehouse_pw": "仓库密码",
 
     "generic_login_err": "用户名或密码无效。",
@@ -44,7 +44,7 @@
     "generic_err_change_password": "密码尚未更改。",
     "wrong_user_pw": "当前密码不正确。",
 
-    "no_characters_found": "未找到字符。",
+    "no_characters_found": "未找到角色。",
     "character_moved": "角色已移至城镇。",
     "character_in_town": "角色已经在城镇中。",
     "no_character_moved": "没有发现可以移动的角色。",

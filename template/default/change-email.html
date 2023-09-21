@@ -1,10 +1,10 @@
 
     <main class="main-content">
-        <h1 class="main-title">Alterar E-mail</h1>
+        <h1 class="main-title">更改电子邮件</h1>
         <div class="news-post">
             <section class="container-config">
                 <div class="box-user-forms">
-                    <span>Preencha para alterar o e-mail:</span>
+                    <span>填写以更改电子邮件:</span>
                     {if="$result != ''"}
                         {if="$result[1] == 'success'"}
                             <p class="user-forms-response success-create">{$result[0]}</p>
@@ -13,15 +13,15 @@
                         {/if}
                     {/if}
                     <form action="/my-account/change-email" method="POST" class="user-forms">
-                        <input type="email" id="emailAtual" name="emailAtual" placeholder="E-mail atual" autocomplete="off" required><br>
-                        <input type="email" id="novoEmail" name="novoEmail" placeholder="Novo e-mail" autocomplete="off" required><a class="tip" tabindex="-1"> ?<span>- E-mail precisa ser válido. <br><br>- Permitido apenas domínios de e-mail conhecidos.</span></a><br>
-                        <input type="email" id="re-novoEmail" name="re-novoEmail" placeholder="Repita o novo e-mail" autocomplete="off" required><br>
+                        <input type="email" id="emailAtual" name="emailAtual" placeholder="当前电子邮件" autocomplete="off" required><br>
+                        <input type="email" id="novoEmail" name="novoEmail" placeholder="新电子邮件" autocomplete="off" required><a class="tip" tabindex="-1"> ?<span>- E-mail precisa ser válido. <br><br>- Permitido apenas domínios de e-mail conhecidos.</span></a><br>
+                        <input type="email" id="re-novoEmail" name="re-novoEmail" placeholder="重复新电子邮件" autocomplete="off" required><br>
                         <input type="hidden" name="__token" value="{$csrf_token}">
                         <div class="g-recaptcha captcha-register" data-sitekey="{#PUBLIC_KEY#}" data-theme="dark"></div>
-                        <button onclick="return confirm('Alterar E-mail?')">Alterar e-mail</button>
+                        <button onclick="return confirm('更改电子邮件?')">更改电子邮件</button>
                     </form>
                 </div>
-                
+
             </section>
         </div>
     </main>

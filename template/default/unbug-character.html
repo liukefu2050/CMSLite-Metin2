@@ -1,11 +1,11 @@
 
     <main class="main-content">
-        <h1 class="main-title">Desbugar Personagens</h1>
+        <h1 class="main-title">调试角色</h1>
         <div class="news-post">
-            
+
             <section class="container-config">
                 <div class="box-user-forms">
-                    <span>Escolha o Personagem:</span>
+                    <span>选择角色:</span>
                     {if="$result != false"}
                         {if="$result[1] == 'success'"}
                             <p class="user-forms-response success-create">{$result[0]}</p>
@@ -15,19 +15,19 @@
                     {/if}
 
                     {if="$characters == false"}
-                        <p class="user-forms-response failed-create">Você precisar criar personagens primeiro.</p>
+                        <p class="user-forms-response failed-create">您需要先创建角色.</p>
                     {else}
                     <table class="ch-table">
                         <tr>
-                            <th>Personagem</th>
-                            <th>Nível</th>
+                            <th>性格</th>
+                            <th>数量</th>
                             <th></th>
                         </tr>
                         {loop="$characters"}
                         <tr>
                             <td>{$value.name}</td>
                             <td>{$value.level}</td>
-                            <td><a href="/my-account/unbug-char/{$value.id}" onclick="return confirm('Deseja desbugar o personagem?')">Desbugar</a></td>
+                            <td><a href="/my-account/unbug-char/{$value.id}" onclick="return confirm('Deseja desbugar o personagem?')">卸载</a></td>
                         </tr>
                         {/loop}
                     {/if}
@@ -35,8 +35,8 @@
                     {if="$characters == false"}
 
                     {else}
-                    <span class="ch-warning">Para desbugar um personagem é preciso que ele esteja deslogado a mais de <strong>5 Minutos.</strong></span><br>
-                    <span class="ch-warning">O personagem será levado para o mapa da cidade 1 do reino da conta.</span>
+                    <span class="ch-warning">若要调试角色，您需要注销的次数超过 <strong>5 Minutos.</strong></span><br>
+                    <span class="ch-warning">该角色将被带到账户主城地图1中。</span>
                     {/if}
                 </div>
             </section>
